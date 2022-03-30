@@ -133,21 +133,12 @@ function getPassedCredits (student){
 }
 
 
-// function getPassedCredits(){
+//darkmode
 
-//     let foundstudent = findStudent();
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
 
-//     let credits = [];
-//     for (let students of foundstudent){
-//         for (let studentCourses of students.courses){
-
-//             if (studentCourses.courseId == studentCourses.passedCredits){
-//           credits.push(studentCourses.passedCredits)};
-        
-//         }
-//     }
-
-//     return credits; 
-// }
 
 

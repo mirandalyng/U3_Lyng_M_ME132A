@@ -1,12 +1,19 @@
 
 body{
-    background-color:whitesmoke; 
+    
     background-image: url(./niagara.jpg);
     background-size: cover;
     background-attachment: fixed;
     padding: 20px;
     
 }
+
+
+.dark-mode{
+    background-image: url(./black.jpeg);
+    color: white;
+}
+
 
 .students{
   

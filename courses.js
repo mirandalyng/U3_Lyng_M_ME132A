@@ -2,7 +2,7 @@
 
 //Global varibles
 let searchInput = document.getElementById("searchInput");
-
+let dark = document.querySelector("button");
 //Function to find course through title in the inputField
 function findCourse() {
   let course = DATABASE.courses.filter((course) =>
@@ -234,6 +234,15 @@ function findResponsible(course){
 
 
 
+    //Function for darkMode
+
+
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+
+      
 
 
 
