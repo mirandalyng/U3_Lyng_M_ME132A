@@ -1,0 +1,66 @@
+
+body{
+    background-color:whitesmoke; 
+    background-image: url(./niagara.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    
+}
+
+.students{
+  
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    margin: 15px;  
+    border-radius: 5px;
+    border: solid 2px grey;
+ 
+ 
+}
+
+
+p {
+    color: black;
+    font-size: x-large;
+    color: black;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: green;
+}
+
+h1{
+    text-align: center;
+    color: green;
+}
+
+#searchStudent{
+    text-align: center;
+    
+}
+
+
+.courseWrapper{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+}
+
+
+
+.oneCourse{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    margin: 5px;
+    width: 300px;
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+
+}
