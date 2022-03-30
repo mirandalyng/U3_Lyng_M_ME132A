@@ -3,6 +3,12 @@
 //Global varibles
 let searchInput = document.getElementById("searchInput");
 let dark = document.querySelector("button");
+
+
+
+
+
+
 //Function to find course through title in the inputField
 function findCourse() {
   let course = DATABASE.courses.filter((course) =>
@@ -244,5 +250,25 @@ function findResponsible(course){
 
       
 
+//Function to get todays date 
+function todayDate(){
 
-
+    var today = new Date();
+    var date =  + today.getDate() + "/" + (today.getMonth()+1) + " - " + today.getFullYear();
+    let dateInput = document.createElement("div");
+    
+    let dateWrapper = document.getElementById("dateDiv");
+    dateWrapper.appendChild(dateInput);
+    
+    
+    dateInput.classList.add("dateInput");
+    
+    
+    dateInput.innerHTML = "DATE: " + date;
+    console.log(date);
+    
+    
+    }
+    
+    
+    todayDate();

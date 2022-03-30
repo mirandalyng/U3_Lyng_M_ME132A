@@ -3,6 +3,7 @@
 //Global varibles
 let searchInput = document.getElementById("searchInput");
 
+
 //Function to find student through inputField
 function findStudent() {
   let student = DATABASE.students.filter((student) =>
@@ -135,10 +136,47 @@ function getPassedCredits (student){
 
 //darkmode
 
-function myFunction() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
+// function myFunction() {
+//   var el = document.body;
+//   el.classList.toggle("dark-mode");
+
+// }
 
 
+// function darkmode() {
+//   // all values retrieved from localStorage will be strings
+//   const wasDarkmode = localStorage.getItem('dark-mode') === 'true';
+//   localStorage.setItem('darkmode', !wasDarkmode);
+//   const element = document.body;
+//   element.classList.toggle('darkmode', !wasDarkmode);
+// }
 
+// function onload() {
+//   document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
+// }
+
+// onload();
+
+
+//Function to get todays date 
+function todayDate(){
+
+  var today = new Date();
+  var date =  + today.getDate() + "/" + (today.getMonth()+1) + " - " + today.getFullYear();
+  let dateInput = document.createElement("div");
+  
+  let dateWrapper = document.getElementById("dateDiv");
+  dateWrapper.appendChild(dateInput);
+  
+  
+  dateInput.classList.add("dateInput");
+  
+  
+  dateInput.innerHTML = "DATE: " + date;
+  console.log(date);
+  
+  
+  }
+  
+  
+  todayDate();
