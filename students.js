@@ -134,20 +134,38 @@ function getPassedCredits (student){
 }
 
 
-//darkmode
+//darkmode 
 
-function darkModeButton() {
-  var el = document.body;
-  el.classList.toggle("dark-mode");
+const toggleBtn = document.getElementById("modeBtn");
+const theme = document.querySelector("body");
+let darkMode = localStorage.getItem("darkmode");
 
+const enableDarkMode = () => {
+  theme.classList.add("dark-mode");
+  toggleBtn.classList.remove("modeBtn");
+  localStorage.setItem("darkmode", "enabled");
+};
+
+const disableDarkMode = () => {
+  theme.classList.remove("dark-mode");
+  toggleBtn.classList.add("modeBtn");
+  localStorage.setItem("darkmode", "disabled");
+};
+
+if (darkMode === "enabled") {
+  enableDarkMode(); // set state of darkMode on page load
 }
 
+toggleBtn.addEventListener("click", (e) => {
+  darkMode = localStorage.getItem("darkmode"); // update darkMode when clicked
+  if (darkMode === "disabled") {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+});
 
-let dmBtn = document.querySelector("button");
 
-dmBtn.addEventListener("click", function (){
-  darkModeButton();
-})
 
 
 
@@ -172,6 +190,8 @@ function todayDate(){
   
   }
   
+
+  //Direct Code
   
   todayDate();
 
