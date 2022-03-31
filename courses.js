@@ -264,5 +264,11 @@ function todayDate() {
   console.log(date);
 }
 
+//Function to clear the inputField when you load the window
+
+window.onload = function () {
+  searchInput.value = "";
+};
+
 //Direct code
 todayDate();
