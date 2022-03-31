@@ -2,7 +2,9 @@
 
 //Global varibles
 let searchInput = document.getElementById("searchInput");
-let dark = document.querySelector("button");
+const toggleBtn = document.getElementById("modeBtn");
+const theme = document.querySelector("body");
+let darkMode = localStorage.getItem("darkmode");
 
 //Function to find course through title in the inputField
 function findCourse() {
@@ -41,7 +43,7 @@ searchInput.addEventListener("keyup", function () {
   }
 });
 
-//Function that creates HTML-content  including student first and last name each time you search for a student.
+//Function that creates HTML-content
 function createCourse(course) {
   //wrapper for each course.
 
@@ -58,7 +60,7 @@ function createCourse(course) {
   courseTitle.innerText =
     course.title + " (" + course.totalCredits + " credits) ";
 
-  //Responisble teacher
+  //Responisble-teacherWrapper + HTML
 
   let foundResponsible = findResponsible(course);
 
@@ -83,7 +85,7 @@ function createCourse(course) {
     responibleWrapper.appendChild(responsibleDiv);
   }
 
-  //Teachers
+  //Teachers-wrapper + HTML
 
   let foundTeachers = findTeachers(course);
 
@@ -112,7 +114,7 @@ function createCourse(course) {
     teachersWrapper.appendChild(teacherDiv);
   }
 
-  //studentwrapper for each course.
+  //Studentwrapper for each course + HTML.
   let studentWrapper = document.createElement("div");
   studentWrapper.classList.add("studentWrapper");
   coursewrapper.appendChild(studentWrapper);
@@ -215,9 +217,7 @@ function findResponsible(course) {
   return foundResponsible;
 }
 
-const toggleBtn = document.getElementById("modeBtn");
-const theme = document.querySelector("body");
-let darkMode = localStorage.getItem("darkmode");
+//Function for the darkmode and localStorage.
 
 const enableDarkMode = () => {
   theme.classList.add("dark-mode");
@@ -264,4 +264,5 @@ function todayDate() {
   console.log(date);
 }
 
+//Direct code
 todayDate();

@@ -2,6 +2,9 @@
 
 //Global varibles
 let searchInput = document.getElementById("searchInput");
+const toggleBtn = document.getElementById("modeBtn");
+const theme = document.querySelector("body");
+let darkMode = localStorage.getItem("darkmode");
 
 //Function to find student through inputField
 function findStudent() {
@@ -40,13 +43,15 @@ searchInput.addEventListener("keyup", function () {
   }
 });
 
-//Function that creates HTML-content  including student first and last name each time you search for a student.
+//Function that creates HTML-content
 function createStudent(student) {
+  //Passed credits
   let passedCreds = getPassedCredits(student);
   let totalCreditsforStudent = passedCreds.reduce(function (a, b) {
     return a + b;
   }, 0);
 
+  //Student wrapper + HTML
   let wrapper = document.getElementById("students");
   let div = document.createElement("div");
 
@@ -65,6 +70,7 @@ function createStudent(student) {
     totalCreditsforStudent +
     ")";
 
+  //Course-title, Wrapper and HTML
   let p1 = document.createElement("p");
   div.appendChild(p1);
   p1.innerText = "Courses:";
@@ -140,11 +146,7 @@ function getPassedCredits(student) {
   return foundCredits;
 }
 
-//darkmode
-
-const toggleBtn = document.getElementById("modeBtn");
-const theme = document.querySelector("body");
-let darkMode = localStorage.getItem("darkmode");
+//Functions for the darkmode and localStorage.
 
 const enableDarkMode = () => {
   theme.classList.add("dark-mode");
