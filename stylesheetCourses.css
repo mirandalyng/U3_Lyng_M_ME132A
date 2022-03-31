@@ -1,122 +1,107 @@
-
-
-
-body{ 
-    background-image: url(./niagara.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 20px;
-    
+body {
+  background-image: url(./niagara.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px;
 }
 
-
-.dark-mode{
-    background-image: url(./night.jpg);
-    background-attachment: fixed;
-    color: white;
+.dark-mode {
+  background-image: url(./night.jpg);
+  background-attachment: fixed;
+  color: white;
 }
 
-#modeBtn{
-    border: solid 2px white ;
-    padding: 20px;
-    background-image: url(./modebutton.png);
-    background-size: contain;
-    background-color: rgba(255, 255, 255, 0.739);
+#modeBtn {
+  border: solid 2px white;
+  padding: 20px;
+  background-image: url(./modebutton.png);
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.739);
 }
 
-.dateInput{
-    width: 150px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.651);
-    border-radius: 5px;
+.dateInput {
+  width: 150px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.651);
+  border-radius: 5px;
 }
 
 #dateDiv {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
-a{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    color: rgb(43, 163, 43);
+a {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: rgb(43, 163, 43);
 }
 
-h1{
-    text-align: center;
-    color: green;
+h1 {
+  text-align: center;
+  color: green;
 }
 
-#searchCourse{
-    text-align: center;
-    
+#searchCourse {
+  text-align: center;
 }
 
-
-
-
-.studentWrapper{
-
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+.studentWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
+.courseStudents {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  margin: 5px;
+  width: 300px;
+  border: solid 1px black;
+  color: black;
 
-.courseStudents{
-    display: flex;
-    flex-direction: column;
-    padding: 7px;
-    margin: 5px;
-    width: 300px;
-    border: solid 1px black;
-    color: black;
-    
-    border-radius: 5px;
-
+  border-radius: 5px;
 }
 
+.responsibleDiv {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 15px;
+  margin: 5px;
 
-.responsibleDiv{
-    display: grid;
-    grid-template-columns: auto;
-    padding: 15px;
-    margin: 5px;
+  width: 200px;
+  border: black solid 1px;
+  border-radius: 5px;
 
-    width: 200px;
-    border: black solid 1px;
-    border-radius: 5px;
-
-    background-color: orange;
-    color: black;
-
+  background-color: orange;
+  color: black;
 }
 
-
-.coursewrapper{
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    margin: 15px;
-    border-radius: 5px;
-    border: solid 2px grey;
+.coursewrapper {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 5px;
+  border: solid 2px grey;
+  color: black;
 }
 
-.teacherDiv{
-
-    padding: 15px;
-    margin: 5px;
-    background-color: white;
-    border: black solid 1px;
-    border-radius: 5px;
-    color: black;
-  }
-
-.teacherWrapper{
-    display: grid;
-    grid-template-columns: auto, auto, auto;
+.teacherDiv {
+  padding: 15px;
+  margin: 5px;
+  background-color: white;
+  border: black solid 1px;
+  border-radius: 5px;
+  color: black;
 }
 
-.students{
-    background-color: white;
+.teacherWrapper {
+  display: grid;
+  grid-template-columns: auto, auto, auto;
+}
+
+.students {
+  background-color: white;
 }

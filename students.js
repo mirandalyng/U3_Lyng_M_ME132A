@@ -3,7 +3,6 @@
 //Global varibles
 let searchInput = document.getElementById("searchInput");
 
-
 //Function to find student through inputField
 function findStudent() {
   let student = DATABASE.students.filter((student) =>
@@ -43,64 +42,77 @@ searchInput.addEventListener("keyup", function () {
 
 //Function that creates HTML-content  including student first and last name each time you search for a student.
 function createStudent(student) {
-    let passedCreds = getPassedCredits(student);
-    let totalCreditsforStudent = passedCreds.reduce(function(a,b){return a + b}, 0);
+  let passedCreds = getPassedCredits(student);
+  let totalCreditsforStudent = passedCreds.reduce(function (a, b) {
+    return a + b;
+  }, 0);
 
-    let wrapper = document.getElementById("students");
-    let div = document.createElement("div");
+  let wrapper = document.getElementById("students");
+  let div = document.createElement("div");
 
-    wrapper.appendChild(div);
-    div.classList.add("students");
-    
-    let p = document.createElement("p");
-    div.appendChild(p);
-    p.innerText = student.firstName + " " + student.lastName + " " + "(Total Credits:" + " " + totalCreditsforStudent + ")";
+  wrapper.appendChild(div);
+  div.classList.add("students");
 
-    let p1 = document.createElement("p");
-    div.appendChild(p1);
-    p1.innerText = "Courses:";
+  let p = document.createElement("p");
+  div.appendChild(p);
+  p.innerText =
+    student.firstName +
+    " " +
+    student.lastName +
+    " " +
+    "(Total Credits:" +
+    " " +
+    totalCreditsforStudent +
+    ")";
 
-    let courseWrapper = document.createElement("div");
-    courseWrapper.classList.add("courseWrapper");
-            
-    div.appendChild(courseWrapper);
+  let p1 = document.createElement("p");
+  div.appendChild(p1);
+  p1.innerText = "Courses:";
 
+  let courseWrapper = document.createElement("div");
+  courseWrapper.classList.add("courseWrapper");
 
-    let foundCourses = getCourseById(student);
+  div.appendChild(courseWrapper);
 
-    for (let i = 0; i < foundCourses.length; i++) {
+  let foundCourses = getCourseById(student);
 
-        let coursesDiv = document.createElement("div");
-        coursesDiv.classList.add("oneCourse")
-    
-        courseWrapper.appendChild(coursesDiv);
-       
-        coursesDiv.innerText = foundCourses[i].title + " " + "\n" + " " + student.courses[i].started.semester + " " + student.courses[i].started.year + " " + 
-          "( "  + student.courses[i].passedCredits + " / "  + foundCourses[i].totalCredits + " " + "credits)";
-    
+  for (let i = 0; i < foundCourses.length; i++) {
+    let coursesDiv = document.createElement("div");
+    coursesDiv.classList.add("oneCourse");
 
-        if(foundCourses[i].totalCredits == student.courses[i].passedCredits){
-            coursesDiv.style.backgroundColor = "green";
-        }
+    courseWrapper.appendChild(coursesDiv);
+
+    coursesDiv.innerText =
+      foundCourses[i].title +
+      " " +
+      "\n" +
+      " " +
+      student.courses[i].started.semester +
+      " " +
+      student.courses[i].started.year +
+      " " +
+      "( " +
+      student.courses[i].passedCredits +
+      " / " +
+      foundCourses[i].totalCredits +
+      " " +
+      "credits)";
+
+    if (foundCourses[i].totalCredits == student.courses[i].passedCredits) {
+      coursesDiv.style.backgroundColor = "green";
+    }
   }
-
- 
-  
 }
-
-
 
 // Function to loop through the students and adding the HTML
 
 function createHTML(students) {
   students.forEach((student) => {
     createStudent(student);
-  
   });
-};
+}
 
-
-//Function to get courses that the each student has read based on the ID. 
+//Function to get courses that the each student has read based on the ID.
 
 function getCourseById(student) {
   let foundCourses = [];
@@ -114,27 +126,21 @@ function getCourseById(student) {
   return foundCourses;
 }
 
-
-
 // Function to get passed credits per course and student.
-function getPassedCredits (student){
-
-    
-    let foundCredits = [];
-    for(let studentCourses of student.courses){
-        for (let DBC of DATABASE.courses){
-            if(studentCourses.courseId == DBC.courseId){
-            foundCredits.push(studentCourses.passedCredits);
-            }
-        }
+function getPassedCredits(student) {
+  let foundCredits = [];
+  for (let studentCourses of student.courses) {
+    for (let DBC of DATABASE.courses) {
+      if (studentCourses.courseId == DBC.courseId) {
+        foundCredits.push(studentCourses.passedCredits);
+      }
     }
+  }
 
-        return foundCredits; 
-
+  return foundCredits;
 }
 
-
-//darkmode 
+//darkmode
 
 const toggleBtn = document.getElementById("modeBtn");
 const theme = document.querySelector("body");
@@ -165,36 +171,26 @@ toggleBtn.addEventListener("click", (e) => {
   }
 });
 
-
-
-
-
-
-//Function to get todays date 
-function todayDate(){
-
+//Function to get todays date
+function todayDate() {
   var today = new Date();
-  var date =  + today.getDate() + "/" + (today.getMonth()+1) + " - " + today.getFullYear();
+  var date =
+    +today.getDate() +
+    "/" +
+    (today.getMonth() + 1) +
+    " - " +
+    today.getFullYear();
   let dateInput = document.createElement("div");
-  
+
   let dateWrapper = document.getElementById("dateDiv");
   dateWrapper.appendChild(dateInput);
-  
-  
+
   dateInput.classList.add("dateInput");
-  
-  
+
   dateInput.innerHTML = "DATE: " + date;
   console.log(date);
-  
-  
-  }
-  
+}
 
-  //Direct Code
-  
-  todayDate();
+//Direct Code
 
-
-
-  
+todayDate();

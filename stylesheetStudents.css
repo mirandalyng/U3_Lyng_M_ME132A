@@ -1,98 +1,80 @@
-
-body{
-    
-    background-image: url(./niagara.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 20px;
-    
-    
+body {
+  background-image: url(./niagara.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px;
 }
 
-  
- .dark-mode{
-    background-image: url(./night.jpg);
-    background-attachment: fixed;
-    color: white;
+.dark-mode {
+  background-image: url(./night.jpg);
+  background-attachment: fixed;
+  color: white;
 }
 
-
-#modeBtn{
-    border: solid 2px white ;
-    padding: 20px;
-    background-image: url(./modebutton.png);
-    background-size: contain;
-    background-color: rgba(255, 255, 255, 0.739);
+#modeBtn {
+  border: solid 2px white;
+  padding: 20px;
+  background-image: url(./modebutton.png);
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.739);
 }
 
-
-.students{
-  
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    margin: 15px;  
-    border-radius: 5px;
-    border: solid 2px grey;
- 
- 
+.students {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 5px;
+  border: solid 2px grey;
 }
-
 
 p {
-    color: black;
-    font-size: x-large;
-    color: black;
+  color: black;
+  font-size: x-large;
+  color: black;
 }
 
-a{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    color: rgb(43, 163, 43);
+a {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: rgb(43, 163, 43);
 }
 
-.dateInput{
-    width: 150px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.651);
-    border-radius: 5px;
+.dateInput {
+  width: 150px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.651);
+  border-radius: 5px;
 }
 
 #dateDiv {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
-h1{
-    text-align: center;
-    color: green;
-    
+h1 {
+  text-align: center;
+  color: green;
 }
 
-#searchStudent{
-    text-align: center;
-    
+#searchStudent {
+  text-align: center;
 }
 
-
-.courseWrapper{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    
+.courseWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
-
-
-.oneCourse{
-    display: flex;
-    flex-direction: column;
-    padding: 7px;
-    margin: 5px;
-    width: 300px;
-    border: solid 1px black;
-    color: black;
-    background-color: white;
-    border-radius: 5px;
-
+.oneCourse {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  margin: 5px;
+  width: 300px;
+  border: solid 1px black;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
 }

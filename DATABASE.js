@@ -9,12 +9,12 @@
 const DATABASE = {
   // STUDENTS
   // ========
-  // 
+  //
   // Each student is an object in the form of:
   //
   //  {
   //    studentId,
-  //    firstName,    
+  //    firstName,
   //    lastName,
   //    courses: [
   //      { courseId, started: { semester, year }, passedCredits },
@@ -2181,7 +2181,7 @@ const DATABASE = {
 
   // COURSES
   // =======
-  // 
+  //
   // Each course is an object in the form of:
   //
   //  {
@@ -2421,7 +2421,7 @@ const DATABASE = {
       teacherId: 1,
       firstName: "Erik",
       lastName: "Karlsson",
-      post: "Adjunkt"
+      post: "Adjunkt",
     },
     {
       teacherId: 2,
@@ -2433,19 +2433,19 @@ const DATABASE = {
       teacherId: 3,
       firstName: "Maria",
       lastName: "Berg",
-      post: "Professor"
+      post: "Professor",
     },
     {
       teacherId: 4,
       firstName: "Suzan",
       lastName: "Engberg",
-      post: "Docent"
+      post: "Docent",
     },
     {
       teacherId: 5,
       firstName: "Sven",
       lastName: "Bengtegård",
-      post: "Lektor"
+      post: "Lektor",
     },
     {
       teacherId: 6,
