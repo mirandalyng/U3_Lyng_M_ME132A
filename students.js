@@ -136,26 +136,20 @@ function getPassedCredits (student){
 
 //darkmode
 
-// function myFunction() {
-//   var el = document.body;
-//   el.classList.toggle("dark-mode");
+function darkModeButton() {
+  var el = document.body;
+  el.classList.toggle("dark-mode");
 
-// }
+}
 
 
-// function darkmode() {
-//   // all values retrieved from localStorage will be strings
-//   const wasDarkmode = localStorage.getItem('dark-mode') === 'true';
-//   localStorage.setItem('darkmode', !wasDarkmode);
-//   const element = document.body;
-//   element.classList.toggle('darkmode', !wasDarkmode);
-// }
+let dmBtn = document.querySelector("button");
 
-// function onload() {
-//   document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
-// }
+dmBtn.addEventListener("click", function (){
+  darkModeButton();
+})
 
-// onload();
+
 
 
 //Function to get todays date 
@@ -180,3 +174,7 @@ function todayDate(){
   
   
   todayDate();
+
+
+
+  

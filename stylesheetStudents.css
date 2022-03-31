@@ -6,13 +6,16 @@ body{
     background-attachment: fixed;
     padding: 20px;
     
+    
 }
 
-
-.dark-mode{
+  
+ .dark-mode{
     background-image: url(./black.jpeg);
     color: white;
 }
+
+
 
 
 .students{
@@ -56,6 +59,7 @@ a{
 h1{
     text-align: center;
     color: green;
+    
 }
 
 #searchStudent{

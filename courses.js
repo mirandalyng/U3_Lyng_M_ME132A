@@ -243,11 +243,17 @@ function findResponsible(course){
     //Function for darkMode
 
 
-    function myFunction() {
+    function darkModeButton() {
        var element = document.body;
        element.classList.toggle("dark-mode");
     }
 
+
+    let dmBtn = document.querySelector("button")
+
+    dmBtn.addEventListener("click", function (){
+    darkModeButton();
+})
       
 
 //Function to get todays date 
